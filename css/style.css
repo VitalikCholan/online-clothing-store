@@ -5,7 +5,7 @@ body {
 }
 
 .title {
-  text-align: center;
+  text-align: start;
 }
 
 .container-catalog {
@@ -13,8 +13,5 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.box-catalog {
-  margin: 1em 1em 7em;
+  gap: 2rem;
 }

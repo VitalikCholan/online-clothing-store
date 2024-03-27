@@ -1,4 +1,6 @@
-fetch("http://localhost:8080/api/v1/clothings")
+fetch("http://localhost:8080/api/v1/clothings", {
+  method: "GET",
+})
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -6,10 +8,20 @@ fetch("http://localhost:8080/api/v1/clothings")
     return response.json();
   })
   .then((data) => {
-    // Handle the data received from the endpoint
-    console.log(data);
+    const boxCatalogs = document.querySelectorAll(".box-catalog");
+    boxCatalogs.forEach((boxCatalog, index) => {
+      if (data[index]) {
+        const clothing = data[index];
+        for (key in clothing) {
+          if (key !== "id") {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = `${key}: ${clothing[key]}`;
+            boxCatalog.appendChild(paragraph);
+          }
+        }
+      }
+    });
   })
   .catch((error) => {
-    // Handle any errors that occur during the fetch operation
     console.error("Error fetching data:", error);
   });
