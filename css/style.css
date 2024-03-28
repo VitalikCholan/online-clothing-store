@@ -4,8 +4,14 @@ body {
   box-sizing: border-box;
 }
 
-.title {
-  text-align: start;
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopping-cart {
+  font-size: 2rem;
+  align-self: center;
 }
 
 .container-catalog {
