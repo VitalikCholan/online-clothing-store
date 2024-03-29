@@ -4,9 +4,19 @@ body {
   box-sizing: border-box;
 }
 
-header {
+ul {
+  list-style-type: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  padding: 0 1em;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
+  background-color: orange;
 }
 
 .shopping-cart {
@@ -14,10 +24,52 @@ header {
   align-self: center;
 }
 
+.container {
+  display: flex;
+}
+
+.sidebar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  left: 0;
+  top: 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
+  overflow-y: auto;
+}
+
+.show-sidebar {
+  width: 300px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog {
+  flex: 1;
+}
+
 .container-catalog {
-  margin: 0 8em;
+  margin: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.box-catalog {
+  width: calc(100% / 5);
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.image {
+  width: 100%;
 }

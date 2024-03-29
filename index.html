@@ -11,7 +11,11 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="header">
+      <button class="sidebar-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
       <h1 class="title">Online clothing store</h1>
 
       <div class="shopping-cart">
@@ -19,38 +23,55 @@
       </div>
     </header>
 
-    <main>
-      <section class="fiter"></section>
-      <section class="catalog">
+    <div class="container">
+      <aside class="sidebar">
+        <section class="sidebar-header">
+          <h2 class="sidebar-title">Filters</h2>
+          <button class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </section>
+        <section class="sidebar-body">
+          <div class="box-sidebar">
+            <h3>Type</h3>
+            <button>T-Shirt</button>
+            <button>Pants</button>
+            <button>Sweater</button>
+          </div>
+        </section>
+      </aside>
+
+      <main class="catalog">
         <div class="container-catalog">
           <div class="box-catalog">
-            <img src="images/clothes-3.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-3.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-4.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-4.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-1.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-1.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-7.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-7.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-2.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-2.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-6.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-6.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-5.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-5.jpg" alt="clothes" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-8.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-8.jpg" alt="clothes" />
           </div>
         </div>
-      </section>
-    </main>
+      </main>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/description.js"></script>
   </body>
 </html>
