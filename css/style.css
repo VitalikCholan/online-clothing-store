@@ -8,7 +8,7 @@ ul {
   list-style-type: none;
 }
 
-.header {
+header {
   position: sticky;
   top: 0;
   height: 80px;
@@ -33,23 +33,55 @@ ul {
   position: sticky;
   left: 0;
   top: 80px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 80px - 2em);
+  padding: 0 1em 0 1em;
   display: flex;
   flex-direction: column;
-  width: 0;
+  width: 300px;
   flex-shrink: 0;
-  overflow: hidden;
   transition: width 500ms ease-in-out;
   overflow-y: auto;
 }
 
-.show-sidebar {
-  width: 300px;
+.hide-sidebar {
+  width: 0;
 }
 
 .sidebar-header {
   display: flex;
   justify-content: space-between;
+  padding: 0 1em;
+}
+
+.close-btn {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  align-self: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sidebar-filter-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em 0 0.5em 1em;
+  border-radius: 10px;
+}
+
+.filter-btn {
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  cursor: pointer;
 }
 
 .catalog {

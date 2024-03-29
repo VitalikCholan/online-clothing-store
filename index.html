@@ -11,7 +11,7 @@
     ></script>
   </head>
   <body>
-    <header class="header">
+    <header>
       <button class="sidebar-toggle">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -32,11 +32,86 @@
           </button>
         </section>
         <section class="sidebar-body">
+          <!-- <div class="search-sidebar">
+            <input type="search" id="search" placeholder="Search all clothes" />
+            <button class="search-btn">Search</button>
+          </div> -->
           <div class="box-sidebar">
-            <h3>Type</h3>
-            <button>T-Shirt</button>
-            <button>Pants</button>
-            <button>Sweater</button>
+            <label for="name" class="sidebar-filter-title">Name</label>
+            <input
+              type="search"
+              id="name"
+              name="name"
+              placeholder="Search clothing by name"
+            />
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Clothing Type</h3>
+            <button class="filter-btn">T-Shirt</button>
+            <button class="filter-btn">Sweater</button>
+            <button class="filter-btn">Jacket</button>
+            <button class="filter-btn">Pants</button>
+            <button class="filter-btn">Boots</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Clothing Size</h3>
+            <button class="filter-btn">S</button>
+            <button class="filter-btn">M</button>
+            <button class="filter-btn">L</button>
+            <button class="filter-btn">XL</button>
+            <button class="filter-btn">XXL</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Sex</h3>
+            <button class="filter-btn">Man</button>
+            <button class="filter-btn">Woman</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Season</h3>
+            <button class="filter-btn">Summer</button>
+            <button class="filter-btn">Autumn</button>
+            <button class="filter-btn">Winter</button>
+            <button class="filter-btn">Spring</button>
+          </div>
+          <div class="box-sidebar">
+            <label for="producer" class="sidebar-filter-title">Producer</label>
+            <input
+              type="search"
+              id="producer"
+              name="producer"
+              placeholder="Search clothing by producer"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="max-price" class="sidebar-filter-title"
+              >Max Price</label
+            >
+            <input
+              type="search"
+              id="max-price"
+              name="max-price"
+              placeholder="Put maximum price of clothing"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="min-price" class="sidebar-filter-title"
+              >Min Price</label
+            >
+            <input
+              type="search"
+              id="min-price"
+              name="min-price"
+              placeholder="Put maximum price of clothing"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="discount" class="sidebar-filter-title">Discount</label>
+            <input
+              type="checkbox"
+              id="discount"
+              name="discount"
+              placeholder="Put maximum price of clothing"
+            />
           </div>
         </section>
       </aside>
@@ -44,25 +119,25 @@
       <main class="catalog">
         <div class="container-catalog">
           <div class="box-catalog">
-            <img class="image" src="images/clothes-3.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-3.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-4.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-4.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-1.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-1.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-7.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-7.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-2.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-2.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-6.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-6.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img class="image" src="images/clothes-5.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-5.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
             <img class="image" src="images/clothes-8.jpg" alt="clothes" />
@@ -72,6 +147,7 @@
     </div>
 
     <script src="js/sidebar.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/description.js"></script>
   </body>
 </html>

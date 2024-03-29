@@ -3,9 +3,9 @@ const closeBtn = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 
 toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('show-sidebar');
+  sidebar.classList.toggle('hide-sidebar');
 });
 
 closeBtn.addEventListener('click', () => {
-  sidebar.classList.remove('show-sidebar');
+  sidebar.classList.add('hide-sidebar');
 });
