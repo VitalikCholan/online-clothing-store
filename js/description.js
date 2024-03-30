@@ -13,7 +13,7 @@ fetch('http://localhost:8080/api/v1/clothings', {
       if (data[index]) {
         const clothing = data[index];
         for (key in clothing) {
-          if (key !== 'id') {
+          if (key !== 'id' && key !== 'links') {
             const paragraph = document.createElement('p');
             paragraph.textContent = `${key}: ${clothing[key]}`;
             boxCatalog.appendChild(paragraph);

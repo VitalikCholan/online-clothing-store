@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -33,24 +34,34 @@ header {
   position: sticky;
   left: 0;
   top: 80px;
-  height: calc(100vh - 80px - 2em);
+  height: calc(100vh - 80px);
   padding: 0 1em 0 1em;
+  border-right: 0.5px solid black;
   display: flex;
   flex-direction: column;
   width: 300px;
-  flex-shrink: 0;
-  transition: width 500ms ease-in-out;
   overflow-y: auto;
+  visibility: visible;
+  flex-shrink: 0;
+  transition: width 500ms ease-in-out, overflow-y 500ms ease-in-out,
+    visibility 500ms ease-in-out;
 }
 
 .hide-sidebar {
   width: 0;
+  overflow-y: hidden;
+  visibility: hidden;
 }
 
 .sidebar-header {
   display: flex;
   justify-content: space-between;
   padding: 0 1em;
+  border-bottom: 0.5px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
 .close-btn {
@@ -58,6 +69,7 @@ header {
   width: 35px;
   height: 35px;
   align-self: center;
+  border: 0.5px solid black;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -74,10 +86,12 @@ input {
   width: 100%;
   padding: 0.5em 0 0.5em 1em;
   border-radius: 10px;
+  border: 0.5px solid black;
 }
 
 .filter-btn {
   background-color: white;
+  border: 0.5px solid black;
   border-radius: 25px;
   padding: 0.5em 1em;
   margin: 0.5em;
@@ -99,7 +113,8 @@ input {
 .box-catalog {
   width: calc(100% / 5);
   padding: 1em;
-  border: 1px solid black;
+  border: 0.5px solid black;
+  border-radius: 25px;
 }
 
 .image {
