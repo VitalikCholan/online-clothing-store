@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online clothing store</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/94d4b51bbe.js"
       crossorigin="anonymous"
@@ -12,6 +18,10 @@
   </head>
   <body>
     <header>
+      <button class="sidebar-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
       <h1 class="title">Online clothing store</h1>
 
       <div class="shopping-cart">
@@ -19,38 +29,127 @@
       </div>
     </header>
 
-    <main>
-      <section class="fiter"></section>
-      <section class="catalog">
+    <div class="container">
+      <aside class="sidebar">
+        <section class="sidebar-header">
+          <h2 class="sidebar-title">Filters</h2>
+          <button class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </section>
+        <section class="sidebar-body">
+          <div class="box-sidebar">
+            <label for="name" class="sidebar-filter-title">Name</label>
+            <input
+              type="search"
+              id="name"
+              name="name"
+              placeholder="Search clothing by name"
+            />
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Clothing Type</h3>
+            <button class="filter-btn">T-Shirt</button>
+            <button class="filter-btn">Sweater</button>
+            <button class="filter-btn">Jacket</button>
+            <button class="filter-btn">Pants</button>
+            <button class="filter-btn">Boots</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Clothing Size</h3>
+            <button class="filter-btn">S</button>
+            <button class="filter-btn">M</button>
+            <button class="filter-btn">L</button>
+            <button class="filter-btn">XL</button>
+            <button class="filter-btn">XXL</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Sex</h3>
+            <button class="filter-btn">Man</button>
+            <button class="filter-btn">Woman</button>
+          </div>
+          <div class="box-sidebar">
+            <h3 class="sidebar-filter-title">Season</h3>
+            <button class="filter-btn">Summer</button>
+            <button class="filter-btn">Autumn</button>
+            <button class="filter-btn">Winter</button>
+            <button class="filter-btn">Spring</button>
+          </div>
+          <div class="box-sidebar">
+            <label for="producer" class="sidebar-filter-title">Producer</label>
+            <input
+              type="search"
+              id="producer"
+              name="producer"
+              placeholder="Search clothing by producer"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="max-price" class="sidebar-filter-title"
+              >Max Price</label
+            >
+            <input
+              type="search"
+              id="max-price"
+              name="max-price"
+              placeholder="Put maximum price of clothing"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="min-price" class="sidebar-filter-title"
+              >Min Price</label
+            >
+            <input
+              type="search"
+              id="min-price"
+              name="min-price"
+              placeholder="Put maximum price of clothing"
+            />
+          </div>
+          <div class="box-sidebar">
+            <label for="discount" class="sidebar-filter-title">Discount</label>
+            <input
+              type="checkbox"
+              id="discount"
+              name="discount"
+              placeholder="Put maximum price of clothing"
+            />
+          </div>
+        </section>
+      </aside>
+
+      <main class="catalog">
         <div class="container-catalog">
           <div class="box-catalog">
-            <img src="images/clothes-3.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-3.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-4.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-4.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-1.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-1.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-7.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-7.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-2.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-2.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-6.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-6.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-5.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-5.jpg" alt="clothing" />
           </div>
           <div class="box-catalog">
-            <img src="images/clothes-8.jpg" alt="clothes" />
+            <img class="image" src="images/clothes-8.jpg" alt="clothes" />
           </div>
         </div>
-      </section>
-    </main>
+      </main>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/description.js"></script>
   </body>
 </html>

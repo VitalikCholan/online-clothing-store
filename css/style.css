@@ -2,11 +2,22 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style-type: none;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  padding: 0 1em;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
+  background-color: orange;
 }
 
 .shopping-cart {
@@ -14,10 +25,98 @@ header {
   align-self: center;
 }
 
+.container {
+  display: flex;
+}
+
+.sidebar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  left: 0;
+  top: 80px;
+  height: calc(100vh - 80px);
+  padding: 0 1em 0 1em;
+  border-right: 0.5px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow-y: auto;
+  visibility: visible;
+  flex-shrink: 0;
+  transition: width 500ms ease-in-out, overflow-y 500ms ease-in-out,
+    visibility 500ms ease-in-out;
+}
+
+.hide-sidebar {
+  width: 0;
+  overflow-y: hidden;
+  visibility: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  border-bottom: 0.5px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.close-btn {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  align-self: center;
+  border: 0.5px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sidebar-filter-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em 0 0.5em 1em;
+  border-radius: 10px;
+  border: 0.5px solid black;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.catalog {
+  flex: 1;
+}
+
 .container-catalog {
-  margin: 0 8em;
+  margin: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.box-catalog {
+  width: calc(100% / 5);
+  padding: 1em;
+  border: 0.5px solid black;
+  border-radius: 25px;
+}
+
+.image {
+  width: 100%;
 }
