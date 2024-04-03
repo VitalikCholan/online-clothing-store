@@ -137,11 +137,9 @@ async function searchClothing() {
         clothingSeason.textContent = `Season: ${item.season}`;
         clothingItem.appendChild(clothingSeason);
 
-        // if (item.producer) {
         const clothingProducer = document.createElement('p');
         clothingProducer.textContent = `Producer: ${item.producer}`;
         clothingItem.appendChild(clothingProducer);
-        // }
 
         const priceElement = document.createElement('p');
         priceElement.textContent = `Price: ${item.price}`;

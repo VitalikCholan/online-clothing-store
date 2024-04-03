@@ -1,14 +1,12 @@
-fetch('http://localhost:8080/api/v1/clothings', {
-  method: 'GET',
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then((data) => {
+(async () => {
+  try {
+    const response = await fetch('http://localhost:8080/api/v1/clothings', {
+      method: 'GET',
+    });
+
+    const data = await response.json();
     const boxCatalogs = document.querySelectorAll('.box-catalog');
+
     boxCatalogs.forEach((boxCatalog, index) => {
       if (data[index]) {
         const clothing = data[index];
@@ -21,7 +19,7 @@ fetch('http://localhost:8080/api/v1/clothings', {
         }
       }
     });
-  })
-  .catch((error) => {
-    console.error('Error fetching data:', error);
-  });
+  } catch (error) {
+    console.log('Error:', error);
+  }
+})();
