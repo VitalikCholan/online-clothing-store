@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -43,7 +43,9 @@ header {
   overflow-y: auto;
   visibility: visible;
   flex-shrink: 0;
-  transition: width 500ms ease-in-out, overflow-y 500ms ease-in-out,
+  transition:
+    width 500ms ease-in-out,
+    overflow-y 500ms ease-in-out,
     visibility 500ms ease-in-out;
 }
 
@@ -96,6 +98,10 @@ input {
   padding: 0.5em 1em;
   margin: 0.5em;
   cursor: pointer;
+}
+
+.active {
+  background-color: orange;
 }
 
 .catalog {
