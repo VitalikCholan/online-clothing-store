@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/add-product.css" />
+  </head>
+  <body>
+    <h1>Add Product</h1>
+
+    <form action="add-product">
+      <label for="name">Product name:</label>
+      <input type="text" id="name" name="name" placeholder="" required />
+      <div class="img">
+        <label for="image">Product image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required />
+        <img src="" alt="Product Image" id="imageShow" />
+      </div>
+      <h2>Clothing Type:</h2>
+      <input
+        type="radio"
+        id="tshirt"
+        name="clothingType"
+        value="T-Shirt"
+        required
+      />
+      <label for="tshirt">T-Shirt</label>
+      <input type="radio" id="sweater" name="clothingType" value="Sweater" />
+      <label for="sweater">Sweater</label>
+      <input
+        type="radio"
+        id="jacket"
+        name="clothingType"
+        value="Jacket"
+      /><label for="jacket">Jacket</label>
+      <input type="radio" id="pants" name="clothingType" value="Pants" />
+      <label for="pants">Pants</label>
+      <input type="radio" id="boots" name="clothingType" value="Boots" /><label
+        for="boots"
+        >Boots</label
+      >
+      <div class="clothing-size">
+        <label>Clothing Size:</label>
+        <select id="clothingSize" name="clothingSize" required>
+          <option value="">Select Size</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+      <h2>Clothing Sex:</h2>
+      <input type="radio" id="man" name="clothingSex" value="Man" required />
+      <label for="man">Man</label>
+      <input type="radio" id="woman" name="clothingSex" value="Woman" />
+      <label for="woman">Woman</label>
+      <input type="radio" id="unisex" name="clothingSex" value="Unisex" /><label
+        for="unisex"
+        >Unisex</label
+      >
+      <div class="clothing-season">
+        <label>Clothing Season:</label>
+        <select id="clothingSeason" name="clothingSeason" required>
+          <option value="">Select Season</option>
+          <option value="Summer">Summer</option>
+          <option value="Autumn">Autumn</option>
+          <option value="Winter">Winter</option>
+          <option value="Spring">Spring</option>
+        </select>
+      </div>
+      <label for="producer">Producer name:</label>
+      <input
+        type="text"
+        id="producer"
+        name="producer"
+        placeholder=""
+        required
+      />
+      <div class="price">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" placeholder="" required />
+      </div>
+      <label for="discount">Discount:</label>
+      <input
+        type="checkbox"
+        id="discount"
+        name="discount"
+        placeholder="Put maximum price of clothing"
+      />
+      <button type="submit">Add product</button>
+    </form>
+
+    <script src="js/showImage.js"></script>
+    <script src="js/submitProduct.js"></script>
+  </body>
+</html>

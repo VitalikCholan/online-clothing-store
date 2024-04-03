@@ -1,0 +1,17 @@
+.clothing-size {
+  display: block;
+}
+
+.clothing-season {
+  display: block;
+}
+
+.price {
+  display: block;
+}
+
+img {
+  display: none;
+  width: 50%;
+  height: 50%;
+}
