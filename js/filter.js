@@ -160,3 +160,18 @@ async function searchClothing() {
 searchBtn.addEventListener('click', () => {
   searchClothing();
 });
+
+searchBtn.addEventListener('click', () => {
+  fetch('http://localhost:8080/api/v1/images/t-shirt-test-3.jpg', {
+    method: 'GET',
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
+});

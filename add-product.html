@@ -4,65 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Product</title>
-    <link rel="stylesheet" href="css/add-product.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/filepond/dist/filepond.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/add-product.css" />
+    <script
+      src="https://kit.fontawesome.com/94d4b51bbe.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <form
-      class="form-container"
-      action=""
-      method="POST"
-      enctype="multipart/form-data"
-    >
+    <form id="dataForm" class="form-container" action="" method="POST">
       <div class="img-box">
-        <label for="images">Product images:</label>
-        <input
-          type="file"
-          id="images"
-          name="images"
-          accept="image/*"
-          multiple
-          required
-        />
-        <template id="imageTemplate">
-          <img class="show" src="" alt="Product Image" />
-        </template>
-        <div id="imageShow" class="image-show"></div>
+        <input type="file" id="images" name="images" required />
       </div>
 
       <div class="input-box">
         <label for="name">Product name:</label>
-        <input type="text" id="name" name="name" placeholder="" required />
+        <input type="text" id="name" name="name" required />
 
         <h2>Clothing Type:</h2>
         <input
           type="radio"
           id="tshirt"
           name="clothingType"
-          value="T-Shirt"
+          value="T_SHIRT"
           required
         />
         <label for="tshirt">T-Shirt</label>
-        <input type="radio" id="sweater" name="clothingType" value="Sweater" />
-        <label for="sweater">Sweater</label>
+        <input type="radio" id="sweater" name="clothingType" value="SWEATER" />
+        <label for="sweater">S</label>
         <input
           type="radio"
           id="jacket"
           name="clothingType"
-          value="Jacket"
+          value="JACKET"
         /><label for="jacket">Jacket</label>
-        <input type="radio" id="pants" name="clothingType" value="Pants" />
+        <input type="radio" id="pants" name="clothingType" value="PANTS" />
         <label for="pants">Pants</label>
         <input
           type="radio"
           id="boots"
           name="clothingType"
-          value="Boots"
+          value="BOOTS"
         /><label for="boots">Boots</label>
 
         <div class="clothing-size">
@@ -80,15 +75,15 @@
         </div>
 
         <h2>Clothing Sex:</h2>
-        <input type="radio" id="man" name="clothingSex" value="Man" required />
+        <input type="radio" id="man" name="clothingSex" value="MAN" required />
         <label for="man">Man</label>
-        <input type="radio" id="woman" name="clothingSex" value="Woman" />
+        <input type="radio" id="woman" name="clothingSex" value="WOMAN" />
         <label for="woman">Woman</label>
         <input
           type="radio"
           id="unisex"
           name="clothingSex"
-          value="Unisex"
+          value="UNISEX"
         /><label for="unisex">Unisex</label>
 
         <div class="clothing-season">
@@ -97,7 +92,7 @@
             type="radio"
             id="summer"
             name="clothingSeason"
-            value="Summer"
+            value="SUMMER"
             required
           />
           <label for="summer">Summer</label>
@@ -105,23 +100,42 @@
             type="radio"
             id="autumn"
             name="clothingSeason"
-            value="Autumn"
+            value="AUTUMN"
           />
           <label for="autumn">Autumn</label>
           <input
             type="radio"
             id="winter"
             name="clothingSeason"
-            value="Winter"
+            value="WINTER"
           />
           <label for="winter">Winter</label>
           <input
             type="radio"
             id="spring"
             name="clothingSeason"
-            value="Spring"
+            value="SPRING"
           />
           <label for="spring">Spring</label>
+        </div>
+
+        <div class="clothing-season">
+          <h2>Clothing Condition:</h2>
+          <input
+            type="radio"
+            id="good"
+            name="clothingCondition"
+            value="GOOD"
+            required
+          />
+          <label for="summer">Good</label>
+          <input
+            type="radio"
+            id="autumn"
+            name="clothingCondition"
+            value="BAD"
+          />
+          <label for="autumn">Bad</label>
         </div>
 
         <label for="producer">Producer name:</label>
@@ -152,11 +166,13 @@
           placeholder="Put maximum price of clothing"
         />
 
-        <button type="submit">Add product</button>
+        <button type="submit">Submit product</button>
       </div>
     </form>
 
-    <script src="js/showImage.js"></script>
-    <script src="js/submitProduct.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script src="js/submitClothes.js"></script>
   </body>
 </html>
