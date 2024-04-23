@@ -1,0 +1,23 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px) minmax(300px, 600px) 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+  grid-template-areas: ". images description .";
+  border: 1px solid red;
+}
+
+.images {
+  grid-area: images;
+  border: 1px solid green;
+}
+
+.description {
+  grid-area: description;
+  border: 1px solid blue;
+}

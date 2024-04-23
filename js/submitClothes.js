@@ -36,6 +36,7 @@ dataForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const formData = {
+    // id: '2',
     name: document.getElementById('name').value,
     clothingType: document.querySelector('input[name="clothingType"]:checked')
       .value,
@@ -64,7 +65,7 @@ dataForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(formData),
     });
     if (response.ok) {
-      console.log('Product data submitted successfully');
+      console.log('Product data submitted successfully', response.id);
     } else {
       console.error('Error submitting product data:', response.statusText);
     }
