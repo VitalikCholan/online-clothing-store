@@ -36,7 +36,6 @@ dataForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const formData = {
-    // id: '2',
     name: document.getElementById('name').value,
     clothingType: document.querySelector('input[name="clothingType"]:checked')
       .value,

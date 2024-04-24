@@ -48,8 +48,6 @@ async function fetchData() {
       const clothingDiscount = document.createElement('p');
       clothingDiscount.textContent = `Clothing discount: ${data.discount}`;
       descriptionSection.appendChild(clothingDiscount);
-
-      console.log(data);
     } else {
       console.error('Failed to fetch data:', response.statusText);
     }
